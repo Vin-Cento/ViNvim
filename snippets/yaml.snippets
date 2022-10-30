@@ -1,0 +1,11 @@
+snippet ansible
+	- name: ${0:purpose}
+		hosts: ${1:all}:}
+		remote_user: ${2:ubuntu}
+		become: true
+		tasks:
+
+snippet a_pip
+	- name: ${0:Desciption} 
+		ansible.builtin.pip:
+			name: ${0:package_name}

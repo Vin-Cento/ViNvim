@@ -1,3 +1,36 @@
+snippet join
+	-- (INNER) JOIN: Returns records that have matching values in both tables
+	SELECT ${0:columns}
+		FROM ${1:table1}
+		JOIN ${2:table2}
+	ON $1.${3:col} = $2.${4:$3}
+
+snippet left_join
+	-- LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+	SELECT ${0:columns}
+		FROM ${1:table1}
+		LEFT JOIN ${2:table2}
+	ON $1.${3:col} = $2.${4:$3}
+
+snippet right_join
+	-- RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+	SELECT ${0:columns}
+		FROM ${1:table1}
+		RIGHT JOIN ${2:table2}
+	ON $1.${3:col} = $2.${4:$3}
+
+snippet full_join
+	-- FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+	SELECT ${0:columns}
+		FROM ${1:table1}
+		FULL JOIN ${2:table2}
+	ON $1.${3:col} = $2.${4:$3}
+
+snippet where
+	SELECT ${1:*}
+		FROM ${2:table1}
+	WHERE ${0:condition};
+
 snippet set
 	SET @${1:name} := ${0:val};
 
@@ -8,7 +41,7 @@ snippet tabav
 	INSERT INTO ${1:table}(${2:cols}) VALUES (${0:vals});
 
 snippet tabc
-	create table ${1:table} (
+	CREATE TABLE ${1:table} (
 		 id INT NOT NULL AUTO_INCREMENT,
 		 PRIMARY KEY ( id )
 	);
@@ -17,34 +50,34 @@ snippet col
 	${1:name}	${2:type}	${3:default ''}	${0:not null}
 
 snippet ccol
-	${1:name}	varchar2(${2:size})	${3:default ''}	${0:not null}
+	${1:name}	VARCHAR2(${2:size})	${3:default ''}	${0:not null}
 
 snippet ncol
-	${1:name}	number	${3:default 0}	${0:not null}
+	${1:name}	NUMBER	${3:default 0}	${0:not null}
 
 snippet dcol
-	${1:name}	date	${3:default sysdate}	${0:not null}
+	${1:name}	DATE	${3:default sysdate}	${0:not null}
 
 snippet ind
-	create index ${0:$1_$2} on ${1:table}(${2:column});
+	CREATE INDEX ${0:$1_$2} ON ${1:table}(${2:column});
 
 snippet uind
-	create unique index ${1:name} on ${2:table}(${0:column});
+	CREATE UNIQUE INDEX ${1:name} ON ${2:table}(${0:column});
 
 snippet tblcom
-	comment on table ${1:table} is '${0:comment}';
+	COMMENT ON TABLE ${1:table} IS '${0:comment}';
 
 snippet colcom
-	comment on column ${1:table}.${2:column} is '${0:comment}';
+	COMMENT ON COLUMN ${1:table}.${2:column} IS '${0:comment}';
 
 snippet addcol
-	alter table ${1:table} add (${2:column} ${0:type});
+	ALTER TABLE ${1:table} ADD (${2:column} ${0:type});
 
 snippet seq
-	create sequence ${1:name} start with ${2:1} increment by ${3:1} minvalue ${0:1};
+	CREATE SEQUENCE ${1:name} START WITH ${2:1} INCREMENT BY ${3:1} MINVALUE ${0:1};
 
 snippet s*
-	select * from ${0:table}
+	SELECT * FROM ${0:table}
 
 # PERMISSIONS
 snippet revoke

@@ -1,3 +1,4 @@
+-- https://github.com/Pocco81/true-zen.nvim
 require("true-zen").setup({
 	modes = {
 		ataraxis = {

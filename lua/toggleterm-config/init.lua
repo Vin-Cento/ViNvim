@@ -1,14 +1,10 @@
 --[[ https://github.com/akinsho/toggleterm.nvim ]]
 
 require("toggleterm").setup({
-	open_mapping = [[<c-\>]],
-	size = 55,
+    open_mapping = [[<c-\>]],
+	size = 10,
 	shade_terminals = true,
-	--[[ direction = "vertical", ]]
-	direction = "float",
-	-- float_opts = {
-	-- 	border = "double",
-	-- },
+	direction = "horizontal",
 	close_on_exit = true,
 })
 

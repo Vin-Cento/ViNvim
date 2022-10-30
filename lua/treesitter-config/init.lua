@@ -1,45 +1,27 @@
-local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
-
-parser_configs.norg = {
-	install_info = {
-		url = "https://github.com/nvim-neorg/tree-sitter-norg",
-		files = { "src/parser.c", "src/scanner.cc" },
-		branch = "main",
-	},
-}
-
-parser_configs.norg_meta = {
-	install_info = {
-		url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
-		files = { "src/parser.c" },
-		branch = "main",
-	},
-}
-
-parser_configs.norg_table = {
-	install_info = {
-		url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
-		files = { "src/parser.c" },
-		branch = "main",
-	},
-}
-
 require("nvim-treesitter.configs").setup({
 	--> parsers <--
 	ensure_installed = {
 		"c",
 		"css",
 		"bash",
-		"fish",
 		"javascript",
 		"lua",
 		"typescript",
 	},
 	sync_install = false,
+    --> highlight <--
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
+		disable = function(lang, buf)
+			local max_filesize = 100 * 1024 -- 100 KB
+			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+			if ok and stats and stats.size > max_filesize then
+				return true
+			end
+		end,
 	},
+    --> indent <--
 	indent = {
 		enable = true,
 	},
@@ -47,7 +29,6 @@ require("nvim-treesitter.configs").setup({
 	textobjects = {
 		select = {
 			enable = true,
-			-- Automatically jump forward to textobj, similar to targets.vim
 			lookahead = true,
 			keymaps = {
 				-- You can use the capture groups defined in textobjects.scm
@@ -107,23 +88,23 @@ require("nvim-treesitter.configs").setup({
 			show_help = "?",
 		},
 	},
-	--> refactor module
+	--> refactor module <--
 	refactor = {
 		smart_rename = {
 			enable = true,
 			keymaps = {
-				smart_rename = "grr",
+				smart_rename = "<leader>rn",
 			},
 		},
 	},
-	--> rainbow tags
+	--> rainbow tags <--
 	rainbow = {
-		enable = false,
+		enable = true,
 		extended_mode = true,
 		max_file_lines = nil,
 	},
 	context_commentstring = {
-		enable = false,
+		enable = true,
 		enable_autocmd = false,
 	},
 })

@@ -1,1 +1,1 @@
-vim.g.UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "/home/vinny/.config/nvim/snippets/"
+vim.g.UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "/home/vinny/.config/nvim/snippets"

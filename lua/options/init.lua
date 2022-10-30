@@ -2,8 +2,8 @@ local set = vim.opt
 
 set.expandtab = true
 set.smarttab = true
-set.shiftwidth = 4
-set.tabstop = 4
+set.shiftwidth = 2
+set.tabstop = 2
 
 set.hlsearch = true
 set.incsearch = true
@@ -31,16 +31,16 @@ set.clipboard = "unnamedplus"
 
 set.fillchars = "eob: "
 
-set.foldmethod = "indent"
-set.foldnestmax = 10
--- set.nofoldenable = true
-set.foldlevel = 2
---[[ set.foldexpr = "nvim_treesitter#foldexpr()" ]]
+set.nu = true
 
-vim.g.moonflyTransparent = 1
-vim.cmd([[
-    colorscheme moonfly
-]])
+set.foldmethod = "indent"
+set.wrap = true
+
+set.foldnestmax = 10
+set.foldlevel = 7
+set.foldexpr = "nvim_treesitter#foldexpr()"
+
+set.spell.spelllang="en_us"
 
 -- vimtex config
 vim.g.vimtex_view_method = "zathura"
