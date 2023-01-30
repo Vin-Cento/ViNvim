@@ -15,11 +15,11 @@ map("n", "<leader>t", ":NvimTreeToggle<cr>", opts) --> toggle nvim tree
 map("n", "<leader>S", ":set spell!<cr>", opts) --> toggle spell
 
 --> Git Movement <--
-map("n", "<leader>gg", ":GitGutterBufferToggle<cr>", opts) --> toggle git gutter
-map("n", "<leader>gj", "<Plug>(GitGutterNextHunk)", opts) --> toggle git gutter
-map("n", "<leader>gk", "<Plug>(GitGutterPrevHunk)", opts) --> toggle git gutter
+map("n", "<leader>gg", ":GitGutterBufferToggle<cr>", opts)  --> toggle git gutter
+map("n", "<leader>gj", "<Plug>(GitGutterNextHunk)", opts)   --> toggle git gutter
+map("n", "<leader>gk", "<Plug>(GitGutterPrevHunk)", opts)   --> toggle git gutter
+map("n", "<leader>ga", ":Git add %", opts)                  --> toggle git gutter
 map("n", "<leader>gs", ":Git add . | Git status<cr>", opts) --> toggle git gutter
--- map("n", "<leader>ga", ":", opts) --> toggle git gutter
 map("n", "<leader>gc", ":Git commit<cr>", opts) --> toggle git gutter
 
 map("n", "<leader>s", ":w<cr>", opts) --> write to file
@@ -31,7 +31,7 @@ map("n", "<leader>R", ":runtime! %<cr>", opts) --> reload new file
 map("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", ":Telescope buffers<cr>", opts)
-map("n", "fp", ":Telescope project<cr>", opts)
+map("n", "<leader>fp", ":Telescope project<cr>", opts)
 map("n", "gR", ":Telescope lsp_references<cr>", opts)
 map("n", "gD", ":Telescope lsp_definitions<cr>", opts)
 map("n", "<leader>fs", ":UltiSnipsEdit<CR>", opts)
