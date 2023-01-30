@@ -15,10 +15,10 @@ map("n", "<leader>t", ":NvimTreeToggle<cr>", opts) --> toggle nvim tree
 map("n", "<leader>S", ":set spell!<cr>", opts) --> toggle spell
 
 --> Git Movement <--
-map("n", "<leader>gg", ":GitGutterBufferToggle<cr>", opts)  --> toggle git gutter
-map("n", "<leader>gj", "<Plug>(GitGutterNextHunk)", opts)   --> toggle git gutter
-map("n", "<leader>gk", "<Plug>(GitGutterPrevHunk)", opts)   --> toggle git gutter
-map("n", "<leader>ga", ":Git add %", opts)                  --> toggle git gutter
+map("n", "<leader>gg", ":GitGutterBufferToggle<cr>", opts) --> toggle git gutter
+map("n", "<leader>gj", "<Plug>(GitGutterNextHunk)", opts) --> toggle git gutter
+map("n", "<leader>gk", "<Plug>(GitGutterPrevHunk)", opts) --> toggle git gutter
+map("n", "<leader>ga", ":Git add %<cr>", opts) --> toggle git gutter
 map("n", "<leader>gs", ":Git add . | Git status<cr>", opts) --> toggle git gutter
 map("n", "<leader>gc", ":Git commit<cr>", opts) --> toggle git gutter
 
@@ -64,7 +64,6 @@ map("n", "<localleader>r", "nvim_exec('MagmaEvaluateOperator', v:true)", opts2)
 
 map("n", "s", ":HopChar2<cr>", opts)
 map("n", "S", ":HopChar2BC<cr>", opts)
-
 
 map("n", "<leader>zz", ":TZAtaraxis<CR>", {})
 map("v", "<leader>zz", ":'<,'>TZNarrow<CR>", {})

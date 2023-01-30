@@ -1,47 +1,45 @@
 --> Install
 require("packer-config") --> install plugin
 
---> Keystroke Save
-require("autopairs-config")
-require("comment-nvim-config")
-
+--> Setting
 require("options")
-require("indent-blankline-config")
-require("colorizer-config")
-require("ansible")
+require("keymap-config")
+require("filetype_rules")
 
-require("lualine-config")
-require("barbar-config")
-require("git-gutter-config")
-
-require("toggleterm-config")
+--> Base
+require("null-ls-config")
 require("ultisnip-config")
-
 require("nvim-tree-config")
 require("telescope-config")
 require("treesitter-config")
 
-require("lsp-config.language-servers")
--- require("lsp-config.lspsaga")
-require("lsp-config.completion")
-require("lsp-config.null-ls")
-require("ultisnip-config")
-
+--> Filetree
 require("project-root-config")
-require("impatient-config")
 
-require("hop-config")
+--> Looks
+require("barbar-config") --> tabs
+require("lualine-config") --> statusline
+require("nightfox-config") --> theme
+require("colorizer-config") --> color
+require("indent-blankline-config") --> indent
 
-require("truezen-config")
+--> Quality of Life
+require("hop-config") --> sneak
+require("truezen-config") --> focus view
+require("whichkey-config") --> key binding popup
+require("impatient-config") --> caching
+require("autopairs-config") --> autopairs
+require("lastplace-config") --> checkpoint
+require("toggleterm-config") --> terminal
+require("comment-nvim-config") --> comment lines
 
-require("github-config")
-require("whichkey-config")
-require("lastplace-config")
+--> Git
+require("github-config") --> github
+require("git-gutter-config") --> git sidebar
 
-require("filetype_rules")
-require("nightfox-config")
-
-require("keymap-config")
+--> Completion
+require("lsp-config.completion")
+require("lsp-config.language-servers")
 
 -- require("dap-config")
 -- require("metal")

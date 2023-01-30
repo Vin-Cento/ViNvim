@@ -79,5 +79,7 @@ return require("packer").startup(function()
 	-- use("theHamsta/nvim-dap-virtual-text")
 	-- use("mfussenegger/nvim-dap-python") --> python
 	-- use("nvim-telescope/telescope-dap.nvim")
+  --> DROP
 	-- use("tami5/lspsaga.nvim") --> icons for LSP diagnostics
+	-- use("nanotee/sqls.nvim")
 end)

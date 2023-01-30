@@ -14,14 +14,8 @@ local sources = {
 	code_actions.shellcheck,
 	formatting.terrafmt,
   formatting.pg_format,
-	-- diagnostics.sqlfluff.with({ extra_args = { "--dialect", "mysql" } }),
 }
 
 null_ls.setup({
 	sources = sources,
-	-- on_attach = function(client)
-	-- 	if client.server_capabilities.document_formatting then
-	-- 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
-	-- 	end
-	-- end,
 })
