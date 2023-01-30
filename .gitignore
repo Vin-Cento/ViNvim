@@ -1,0 +1,4 @@
+plugin
+*test*
+*old*
+!pack/plugins/start/nvim-ansible/*
