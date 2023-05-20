@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="ViNim_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46356864"
+     inkscape:cx="291.21901"
+     inkscape:cy="447.61441"
+     inkscape:window-width="962"
+     inkscape:window-height="1293"
+     inkscape:window-x="1188"
+     inkscape:window-y="47"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2664">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2660" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2662" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2664"
+       id="linearGradient2666"
+       x1="-1.5637251"
+       y1="94.299218"
+       x2="213.71024"
+       y2="94.299218"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#0000ff;fill-opacity:0.99736756;stroke-width:0"
+       id="path2301"
+       cx="100.34797"
+       cy="102.42893"
+       rx="91.883369"
+       ry="91.077553" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:60.1492px;line-height:1.25;font-family:sans-serif;fill:#00dd00;fill-opacity:1;stroke:none;stroke-width:1.50373"
+       x="-1.5637251"
+       y="116.67472"
+       id="text2415"
+       transform="scale(0.93383326,1.070855)"><tspan
+         id="tspan2413"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Serif Display';-inkscape-font-specification:'Noto Serif Display';stroke-width:1.50373;fill-opacity:1;fill:#00dd00"
+         x="-1.5637251"
+         y="116.67472"
+         sodipodi:role="line">ViNvim</tspan></text>
+  </g>
+</svg>

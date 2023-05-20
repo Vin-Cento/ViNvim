@@ -1,0 +1,13 @@
+snippet emits_vue
+	defineEmits([${1:'update:modelValue'}]);
+
+snippet props_vue
+	defineProps({
+		${1:name}: {
+			type: ${2:String},
+			default: ${0:''},
+		}
+	});
+
+snippet print:
+	console.log(${1:data})

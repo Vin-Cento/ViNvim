@@ -1,0 +1,26 @@
+snippet print:
+	console.log(${1:data})
+
+snippet template:
+	<script setup ${1:lang="ts"}>
+	</script>
+
+	<template>
+		${0:<h1>Hello</h1>}
+	</template>
+
+	<style scoped>
+	</style>
+
+snippet v-autocomplete:
+	<v-autocomplete
+		v-model="${1:censuscodeSelect}"
+		v-model:search.sync="${2:censuscodeSearch}"
+		label="${3:Enter CensusCode}"
+		:loading="${4:censuscodeLoading}"
+		:items="${5:censuscodeItems}"
+		type="number"
+		variant="solo"
+		multiple
+		style="padding-top: 1rem; padding-right: 5px; font-size: 2rem"
+	/>
