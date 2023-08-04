@@ -24,3 +24,16 @@ snippet v-autocomplete:
 		multiple
 		style="padding-top: 1rem; padding-right: 5px; font-size: 2rem"
 	/>
+
+snippet form:
+	<form @submit.prevent="login">
+		<input
+			type="text"
+			placeholder="Username"
+			name="username"
+		/>
+		<br />
+		<input
+			type="submit"
+		/>
+	</form>

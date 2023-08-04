@@ -30,3 +30,11 @@ snippet for
 
 snippet float
 	${1:var}: float = ${2:float}
+
+snippet def
+	def ${1:main}(${2:}):
+		${0:body}
+
+snippet readfile
+	with open("${1:filename}","r") as fileobj:
+		${0:body}

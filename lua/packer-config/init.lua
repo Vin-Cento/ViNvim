@@ -12,7 +12,15 @@ return require("packer").startup(function()
 	use("nvim-telescope/telescope.nvim") --> telescope fzf viewing
 	use("jose-elias-alvarez/null-ls.nvim") --> diagnistocs, formattings, code actions
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
-	use({ "klen/nvim-test" })
+	-- use({ "klen/nvim-test" })
+	-- use({
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	-- follow latest release.
+	-- 	tag = "v<CurrentMajor>.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- 	-- install jsregexp (optional!:).
+	-- 	run = "make install_jsregexp",
+	-- })
+	use("saadparwaiz1/cmp_luasnip")
 
 	--> MIDDLEWARE
 	use("williamboman/mason-lspconfig.nvim") --> bridge mason and lsp
@@ -20,7 +28,7 @@ return require("packer").startup(function()
 
 	--> Looks
 	use("romgrk/barbar.nvim") --> tabs
-	-- use("EdenEast/nightfox.nvim") --> theme
+	use("EdenEast/nightfox.nvim") --> theme
 	use("ellisonleao/gruvbox.nvim")
 	use("nvim-lualine/lualine.nvim") --> statusline
 	use("norcalli/nvim-colorizer.lua") --> color
@@ -39,6 +47,15 @@ return require("packer").startup(function()
 	--> Quality of Life
 	use("phaazon/hop.nvim") --> sneak
 	use("tpope/vim-surround") --> surrounding
+	-- use({
+	-- 	"kylechui/nvim-surround",
+	-- 	tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+	-- 	config = function()
+	-- 		require("nvim-surround").setup({
+	-- 			-- Configuration here, or leave empty to use defaults
+	-- 		})
+	-- 	end,
+	-- })
 	use("windwp/nvim-autopairs") --> autopairs
 	use("Pocco81/true-zen.nvim") --> focus view
 	use("numToStr/Comment.nvim") --> comment lines
@@ -47,8 +64,9 @@ return require("packer").startup(function()
 	use({ "folke/which-key.nvim" }) --> keybinding help
 	use({ "ethanholz/nvim-lastplace" }) --> checkpoint
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) --> markdown preview
-	use({ --> commandline better view
-	"VonHeikemen/fine-cmdline.nvim",
+	use({
+		--> commandline better view
+		"VonHeikemen/fine-cmdline.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
 		},
@@ -63,7 +81,7 @@ return require("packer").startup(function()
 	})
 
 	--> treesitter & treesitter modules/plugins
-	use("p00f/nvim-ts-rainbow") --> better pairing color
+	use("HiPhish/rainbow-delimiters.nvim") --> better pairing color
 	use("nvim-treesitter/playground") --> toggle treesitter
 	use("nvim-treesitter/nvim-treesitter-refactor") --> refactor variables
 	use("nvim-telescope/telescope-media-files.nvim") --> show media

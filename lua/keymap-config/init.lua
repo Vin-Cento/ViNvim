@@ -11,7 +11,7 @@ map("n", "K", "{", opts)
 map("v", "J", "}", opts)
 map("v", "K", "{", opts)
 
-map('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
+-- map('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
 
 map("n", "<leader>t", ":NvimTreeToggle<cr>", opts) --> toggle nvim tree
 map("n", "<leader>S", ":set spell!<cr>", opts) --> toggle spell

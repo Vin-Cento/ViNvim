@@ -1,4 +1,5 @@
 local lspkind = require("lspkind")
+-- local luasnip = require("luasnip")
 
 local tabnine = require("cmp_tabnine.config")
 tabnine:setup({
@@ -67,11 +68,15 @@ cmp.setup({
 		expand = function(args)
 			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
+		-- expand = function(args)
+		-- 	luasnip.lsp_expand(args.body)
+		-- end,
 	},
 	sources = cmp.config.sources({
 		{ name = "spell" },
 		{ name = "cmp_tabnine", keyword_length = 5 },
 		{ name = "ultisnips" },
+		-- { name = "luasnip" },
 		{ name = "nvim_lsp" },
 		{ name = "buffer", keyword_length = 2 },
 		{ name = "path", keyword_length = 3 },

@@ -10,10 +10,11 @@ require("filetype_rules")
 require("lsp-config")
 require("null-ls-config")
 require("ultisnip-config")
+-- require("luasnip-config")
 require("nvim-tree-config")
 require("telescope-config")
 require("treesitter-config")
-require("nvim-test-config")
+-- require("nvim-test-config")
 
 --> Filetree
 require("project-root-config")
@@ -21,8 +22,8 @@ require("project-root-config")
 --> Looks
 require("barbar-config") --> tabs
 require("lualine-config") --> statusline
--- require("nightfox-config") --> theme
-require("gruvbox-theme-config") --> theme
+require("nightfox-config") --> theme
+-- require("gruvbox-theme-config") --> theme
 require("colorizer-config") --> color
 require("indent-blankline-config") --> indent
 require("lspsaga-config") --> icons for error
@@ -30,6 +31,7 @@ require("lspsaga-config") --> icons for error
 --> Quality of Life
 require("hop-config") --> sneak
 require("truezen-config") --> focus view
+require("rainbow-config") --> rainbow brackets
 require("whichkey-config") --> key binding popup
 require("impatient-config") --> caching
 require("autopairs-config") --> autopairs
