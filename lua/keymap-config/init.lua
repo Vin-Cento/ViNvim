@@ -11,7 +11,7 @@ map("n", "K", "{", opts)
 map("v", "J", "}", opts)
 map("v", "K", "{", opts)
 
-map('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
+-- map('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
 
 map("n", "<leader>t", ":NvimTreeToggle<cr>", opts) --> toggle nvim tree
 map("n", "<leader>S", ":set spell!<cr>", opts) --> toggle spell
@@ -65,3 +65,8 @@ map("n", "S", ":HopChar2BC<cr>", opts)
 
 map("n", "<leader>zz", ":TZAtaraxis<CR>", {})
 map("v", "<leader>zz", ":'<,'>TZNarrow<CR>", {})
+
+--> new feature
+map('n', '<Leader>tk', '<cmd>:ChatGPT<cr>', opts)
+map('n', '<Leader>tj', '<cmd>:ChatGPTActAs<cr>', opts)
+map('n', '<Leader>tt', '<cmd>:ChatGPTEditWithInstructions<cr>', opts)

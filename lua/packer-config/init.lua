@@ -12,7 +12,7 @@ return require("packer").startup(function()
 	use("nvim-telescope/telescope.nvim") --> telescope fzf viewing
 	use("jose-elias-alvarez/null-ls.nvim") --> diagnistocs, formattings, code actions
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) --> treesitter
-	use({ "klen/nvim-test" })
+	-- use({ "klen/nvim-test" })
 
 	--> MIDDLEWARE
 	use("williamboman/mason-lspconfig.nvim") --> bridge mason and lsp
@@ -20,8 +20,8 @@ return require("packer").startup(function()
 
 	--> Looks
 	use("romgrk/barbar.nvim") --> tabs
-	-- use("EdenEast/nightfox.nvim") --> theme
-	use("ellisonleao/gruvbox.nvim")
+	use("EdenEast/nightfox.nvim") --> theme
+	-- use("ellisonleao/gruvbox.nvim")
 	use("nvim-lualine/lualine.nvim") --> statusline
 	use("norcalli/nvim-colorizer.lua") --> color
 	use("kyazdani42/nvim-web-devicons") --> icons
@@ -86,6 +86,10 @@ return require("packer").startup(function()
 	use({ "rcarriga/nvim-dap-ui" })
 	use({ "theHamsta/nvim-dap-virtual-text" })
 	use({ "nvim-telescope/telescope-dap.nvim" })
+
+	--> new features
+	use({ "jackMort/ChatGPT.nvim" })
+	use({ "MunifTanjim/nui.nvim" })
 
 	-- https://github.com/mfussenegger/nvim-ansible ansible
 end)

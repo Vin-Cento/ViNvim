@@ -13,7 +13,7 @@ require("ultisnip-config")
 require("nvim-tree-config")
 require("telescope-config")
 require("treesitter-config")
-require("nvim-test-config")
+-- require("nvim-test-config")
 
 --> Filetree
 require("project-root-config")
@@ -46,3 +46,7 @@ require("completion")
 
 --> Debugger
 require("dap-config")
+
+--> new feature
+require("chatgpt-config")
+require("auto-config")
