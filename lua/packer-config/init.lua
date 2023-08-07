@@ -48,7 +48,7 @@ return require("packer").startup(function()
 	use({ "ethanholz/nvim-lastplace" }) --> checkpoint
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) --> markdown preview
 	use({ --> commandline better view
-	"VonHeikemen/fine-cmdline.nvim",
+		"VonHeikemen/fine-cmdline.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
 		},
