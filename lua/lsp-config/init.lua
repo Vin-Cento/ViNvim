@@ -5,6 +5,13 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protoc
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+local path = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
+local words = {}
+
+for word in io.open(path, "r"):lines() do
+	table.insert(words, word)
+end
+
 map("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 map("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
 
@@ -59,6 +66,20 @@ require("mason-lspconfig").setup_handlers({
 			},
 		})
 	end,
+	["ltex"] = function()
+		require("lspconfig").ltex.setup({
+			on_attach = on_attach,
+			settings = {
+				ltex = {
+					dictionary = { ["en-US"] = words },
+					disabledRules = {
+						-- ["en-US"] = { "MORFOLOGIK_RULE_EN_US" },
+						["en-US"] = { ":" .. path },
+					},
+				},
+			},
+		})
+	end,
 	-- ["sqlls"] = function()
 	-- 	require("lspconfig").sqlls.setup({
 	-- 		on_attach = on_attach,
@@ -85,17 +106,4 @@ require("mason-lspconfig").setup_handlers({
 	-- 		capabilities = capabilities,
 	-- 	})
 	-- end,
-	["ltex"] = function()
-		require("lspconfig").ltex.setup({
-			on_attach = on_attach,
-			autostart = false,
-			settings = {
-				ltex = {
-					disabledRules = {
-						["en-US"] = { "MORFOLOGIK_RULE_EN_US" },
-					},
-				},
-			},
-		})
-	end,
 })
