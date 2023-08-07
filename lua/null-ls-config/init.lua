@@ -13,9 +13,9 @@ local sources = {
 	formatting.shellharden,
 	code_actions.shellcheck,
 	formatting.terrafmt,
-  -- formatting.pg_format,
-  -- diagnostics.sqlfluff,
-  -- formatting.sqlformat
+	-- formatting.pg_format,
+	-- diagnostics.sqlfluff,
+	-- formatting.sqlformat
 }
 
 null_ls.setup({

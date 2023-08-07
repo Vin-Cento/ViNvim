@@ -21,8 +21,8 @@ require("project-root-config")
 --> Looks
 require("barbar-config") --> tabs
 require("lualine-config") --> statusline
--- require("nightfox-config") --> theme
-require("gruvbox-theme-config") --> theme
+require("nightfox-config") --> theme
+-- require("gruvbox-theme-config") --> theme
 require("colorizer-config") --> color
 require("indent-blankline-config") --> indent
 require("lspsaga-config") --> icons for error

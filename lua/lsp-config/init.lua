@@ -8,7 +8,7 @@ local opts = { noremap = true, silent = true }
 map("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 map("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 	map("n", "gd", ":Telescope lsp_definitions<cr>", opts) --> jumps to the definition of the symbol under the cursor
 	map("n", "gr", ":Telescope lsp_references<cr>", opts) --> lists all the references to the symbl under the cursor in the quickfix window
