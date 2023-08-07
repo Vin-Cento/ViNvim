@@ -1,13 +1,13 @@
 local lspkind = require("lspkind")
 
-local tabnine = require("cmp_tabnine.config")
-tabnine:setup({
-	max_lines = 1000,
-	max_num_results = 3,
-	sort = true,
-	run_on_every_keystroke = false,
-	snippet_placeholder = "..",
-})
+-- local tabnine = require("cmp_tabnine.config")
+-- tabnine:setup({
+-- 	max_lines = 1000,
+-- 	max_num_results = 3,
+-- 	sort = true,
+-- 	run_on_every_keystroke = false,
+-- 	snippet_placeholder = "..",
+-- })
 
 local cmp = require("cmp")
 cmp.setup({
@@ -70,7 +70,7 @@ cmp.setup({
 	},
 	sources = cmp.config.sources({
 		{ name = "spell" },
-		{ name = "cmp_tabnine", keyword_length = 5 },
+		-- { name = "cmp_tabnine", keyword_length = 5 },
 		{ name = "ultisnips" },
 		{ name = "nvim_lsp" },
 		{ name = "buffer", keyword_length = 2 },
