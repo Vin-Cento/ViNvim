@@ -5,13 +5,6 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protoc
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-local path = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
-local words = {}
-
-for word in io.open(path, "r"):lines() do
-	table.insert(words, word)
-end
-
 map("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 map("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
 
@@ -67,6 +60,13 @@ require("mason-lspconfig").setup_handlers({
 		})
 	end,
 	["ltex"] = function()
+		local path = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
+		local words = {}
+
+		for word in io.open(path, "r"):lines() do
+			table.insert(words, word)
+		end
+
 		require("lspconfig").ltex.setup({
 			on_attach = on_attach,
 			settings = {
